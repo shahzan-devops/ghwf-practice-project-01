@@ -18,13 +18,13 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Test Code
-        run: npm test
+        run: npm run test
   deploy:
     runs-on: ubutu-latest
     steps:
       - name: Get Code
         uses: action/checkout@v3
       - name: Build Code
-        run: nom build
+        run: npm run build
       - name: Deploy Code
         run: echo "Deploying Code ..."
